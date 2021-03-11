@@ -2,13 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: monospace;
-    font-size: large;
+    font-family: sans-serif;
+    font-size: medium;
 }
 
 body {
-    background-image: url(media/254361.jpg);
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -21,7 +20,7 @@ nav {
     margin: auto;
     height: 50px;
     background: rgb(12, 2, 181);
-    background: linear-gradient(270deg, rgba(12, 2, 181, 1) 0%, rgba(0, 0, 255, 1) 43%, rgba(0, 212, 255, 1) 100%);
+    background: white;
     justify-items: center;
     align-content: center;
     gap: 50px;
@@ -50,7 +49,6 @@ h2.middle:before {
     background-color: #FFF;
     visibility: hidden;
     transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
 }
 
 h2.middle:hover:before {
@@ -114,7 +112,7 @@ main section.leftStrip {
     flex-wrap: nowrap;
     grid-column: 1 / 2;
     grid-row: 1;
-    background-color: rgba(255, 166, 0, 0.678);
+    background-color: rgba(161, 161, 161, 0.678);
     border-radius: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -129,7 +127,7 @@ label {
 }
 
 .leftStrip input {
-    background-color: rgb(255, 197, 88);
+    background-color: rgb(255, 255, 255);
     max-width: 200px;
     border-radius: 0px;
     outline: none;
@@ -367,7 +365,7 @@ h4 {
 button {
     font-size: larger;
     color: white;
-    background: rgb(60, 149, 184);
+    background: rgb(0, 0, 0);
     outline: none;
 }
 
