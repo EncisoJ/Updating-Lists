@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='author' content='Jason Enciso'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content''>
+    <meta property='og:image' content=''>
+    <meta property='og:title' content=''>
+    <meta property='og:description' content=''>
+    <title>Boiler Plate</title>
+    <link rel='shortcut icon' href='' type='image/x-icon'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="link-background">
+            <h2 class="middle">Home</h2>
+        </div>
+        <div class="link-background">
+            <h2 class="middle">Schedule</h2>
+        </div>
+        <div class="link-background">
+            <h2 class="middle">About</h2>
+        </div>
+
+    </nav>
+    <main>
+        <section class="leftStrip">
+
+            <table>
+                <tr>
+                <tr>
+                    <td>
+                        <label for="firstName"><strong>First Name*</strong></label>
+                    </td>
+                    <td>
+                        <label for="lastName"><strong>Last Name*</strong></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="input">
+                        <input type="text" name="firstName" id="firstName" value="Jason">
+                    </td>
+                    <td class="input">
+                        <input type="text" name="lastName" id="lastName" value="Enciso">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dob"><strong>Date of Birth*</strong></label>
+                    </td>
+                    <td class="input">
+                        <input type="date" name="dob" id="dob" value="2003-11-06">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="from"><strong>Departure City*</strong></label>
+                    </td>
+                    <td class="input">
+                        <input type="text" name="from" id="from" value="Phoenix, AZ">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="to"><strong>Arrival City*</strong></label>
+                    </td>
+                    <td class="input">
+                        <input type="text" name="to" id="to" value="Denver, CO">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="leaving"><strong>Date Leaving*</strong></label>
+                    </td>
+                    <td class="input">
+                        <input type="date" name="leaving" id="leaving" value="2020-11-06">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="returning"><strong>Date Returning*</strong></label>
+                    </td>
+                    <td class="input">
+                        <input type="date" name="returning" id="returning" value="2020-11-10">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="bags"><strong>How Many Bags?</strong></label>
+                    </td>
+                    <td class="input">
+                        <input type="number" name="bags" placeholder="1" id="bags" value="2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="meal" style="font-size: small;">
+                            <strong>What meal would you like?</strong>
+                        </label><br>
+                        <input type="radio" name="radio" id="chicken"> Chicken <br>
+                        <input type="radio" name="radio" id="vegetarian"> Vegetarian <br>
+                        <input type="radio" name="radio" id="fish"> Fish <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Extra Options</h3>
+                        <label class="container">Extra Food
+                            <input type="checkbox" name="extras" id="extraFood">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Headphones
+                            <input type="checkbox" name="extras" id="headphones">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Window Seat
+                            <input type="checkbox" name="extras" id="windowSeat">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Legroom
+                            <input type="checkbox" name="extras" id="legroom">
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="submit" type="submit" name="submit" value="submit" onclick="addToList()">
+                    </td>
+                </tr>
+            </table>
+
+        </section>
+        <section class="rightStrip">
+            <div class="second-col">
+                <div class="col space">
+                    <button id="print" onclick="search()">Search</button>
+                    <input id="search" style="margin-left: 10px;" type="text" placeholder="first last">
+                    <p style="margin-left: 10px;">Sort By:</p>
+                    <select style="margin-left: 10px;" name="users" id="dropDown">
+                        <option value="id">ID</option>
+                        <option value="firstName">First Name</option>
+                        <option value="lastName">Last Name</option>
+                    </select>
+                    <button onclick="print()" id="print">Print All Names</button>
+                </div>
+                <div class="col">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="outfirstName" placeholder="First Name">
+                    <label for="lastName" style="margin-left: 10px;">Last Name</label>
+                    <input type="text" id="outlastName" placeholder="Last Name">
+                </div>
+                <div class="col">
+                    <label for="DoB">Date of Birth</label>
+                    <input type="date" id="outDoB" placeholder="MM/DD/YYYY">
+                    <label for="bags" class="bags" style="margin-left: 10px">Bags</label>
+                    <input type="number" class="bags" name="bags" id="outbags" placeholder="#">
+                </div>
+                <div class="row">
+                    <label for="departing">Leaving from</label>
+                    <input style="margin-left: 10px" type="text" id="outfrom" placeholder="City, State (Phoenix, AZ)">
+                </div>
+                <div class="row">
+                    <label for="arriving"></label>
+                    <input style="margin-left: 10px" type="text" id="outto" placeholder="City, State (Atlanta, GA)">
+                </div>
+                <div class="row">
+                    <label for="leaveDate">Date of departure</label>
+                    <input type="date" name="leaveDate" id="outleaving" placeholder="MM/DD/YYYY">
+                    <label for="returnDate" style="margin-left: 10px">Returning Date</label>
+                    <input type="date" name="returnDate" id="outreturning" placeholder="MM/DD/YYYY">
+                </div>
+                <div class="row" style="margin-top: 10px;">
+                    <p style="margin-right: 10px; width: 120px;">Trip Duration:</p>
+                    <p style="width:75px;" id="outdurration" type="text">
+                    <p>Meal:</p>
+                    <input style="width: 150px;" id="outmeal" type="text">
+                    <p style="margin-left: 20px; margin-right: 10px;">Age:</p>
+                    <p style="width: 50px;" id="outage" type="text">
+                </div>
+                <div class="row">
+                    <p>Extras:</p>
+                    <input id="outextras" type="text">
+                    <p style="margin-left: 20px;">Cost:</p>
+                    <p id="outcost" style="margin-left: 10px;">$300</p>
+                </div>
+                <button id="submit" onclick="addToList()">Submit Changes</button>
+                <div id="success"></div>
+                <div id="names">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
